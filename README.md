@@ -1,35 +1,146 @@
 # PharmaStack 🏥
 
-> Open source Claude Code agent system for pharma
-> commercial analytics. Inspired by Garry Tan's gstack —
-> rebuilt for pharma commercial teams.
+> Open source Claude Code agent system for pharma commercial
+> analytics and business insights. Inspired by Garry Tan's
+> gstack — rebuilt for pharma commercial teams.
 
 ## The Problem
 
-IQVIA charges pharma companies $5M+ annually for
-commercial AI platforms. Pharma analytics leaders can
-build the equivalent internally in days using Claude Code.
+Pharma commercial teams face the same analytical challenges
+across every company and therapeutic area:
+
+- **Patients go undiagnosed** — claims data alone cannot
+  find them
+- **HCPs are targeted generically** — not by their actual
+  patient panel opportunity
+- **Market access barriers kill prescriptions** — before
+  they ever fill
+- **Launches fail analytically** — not clinically
+- **Insights live in silos** — market research, forecasting,
+  field analytics, and market access never talk to each other
+
+IQVIA charges $5M+ annually for platforms that partially
+solve these problems. PharmaStack lets pharma analytics
+teams build the equivalent internally in days.
 
 ## The Solution
 
-8 specialized cognitive modes for pharma commercial work:
+10 specialized cognitive modes — each a different expert
+brain you can summon on demand:
 
 | Skill | Mode | What It Does |
 |---|---|---|
-| `/pharma-ceo` | Chief Commercial Officer | Rethink the commercial problem. Find the 10-star launch strategy. Challenge whether you're solving the right problem. |
-| `/patient-finder` | Data Scientist | Identify underdiagnosed patients using claims, EMR, pharmacy, and longitudinal data signals |
-| `/field-coach` | Sales Coach | Generate personalized HCP call briefs, NBA by channel, visit priority scores |
-| `/market-access` | Market Access Director | Map payer barriers, PA requirements, pull-through strategy by geography |
-| `/forecaster` | Commercial Forecaster | Model launch scenarios, patent cliff impact, revenue trajectory |
-| `/plan-commercial-strategy` | Brand Strategist | Build commercial strategy from scratch. Find the 10-star launch. |
-| `/review-analytics` | Paranoid Analytics Director | Find flaws before insights go to leadership. Grade A-F on 4 dimensions. |
-| `/validate-model` | QA Lead | Test patient finder logic, cohort definitions, ICD-10 codes before production |
+| `/pharma-ceo` | Chief Commercial Officer | Rethink the commercial problem. Challenge whether you're solving the right question. Find the 10-star strategy. |
+| `/patient-finder` | Data Scientist | Identify underdiagnosed and undertreated patients using claims, EMR, pharmacy, and longitudinal data signals |
+| `/field-coach` | Sales Coach | Generate personalized HCP call briefs, next-best-action by channel, visit priority scores |
+| `/market-access` | Market Access Director | Map payer barriers, PA requirements, formulary strategy, pull-through by geography |
+| `/forecaster` | Commercial Forecaster | Model launch scenarios, patent cliff impact, revenue trajectory, market share projections |
+| `/plan-commercial-strategy` | Brand Strategist | Build commercial strategy from scratch. Pressure-test whether you're solving the right problem. |
+| `/market-researcher` | Market Research Director | Design research plans, synthesize primary and secondary insights, brand positioning analysis |
+| `/competitive-intelligence` | CI Analyst | Track pipeline threats, competitor positioning, launch sequencing, market share dynamics |
+| `/review-analytics` | Paranoid Analytics Director | Find flaws before insights go to leadership. Grade A-F on data quality, methodology, and business logic. |
+| `/validate-model` | QA Lead | Test patient finder logic, cohort definitions, ICD-10 codes, and model assumptions before production |
+
+---
+
+## Example: Three Companies, Three Challenges, One System
+
+### Example 1 — Cardiovascular Drug Launch
+**The Challenge:** A cholesterol-lowering injectable with
+strong clinical evidence but massive underutilization.
+92% of eligible patients are not at their LDL-C goal
+on statins alone. Most are never identified.
+
+**PharmaStack `/patient-finder` output:**
+- 4 patient segments defined by claims + EMR lab signals
+- Specific ICD-10, RxNorm, and LOINC codes for each segment
+- 630,000 estimated Northeast patient pool
+- Ranked next-best-action: rep visit, PA support,
+  EHR advisory, nurse navigator, patient mailer
+- Conversion rates and cost-per-patient-started by action
+
+**PharmaStack `/pharma-ceo` output:**
+- Reframed the problem: not a clinical awareness failure —
+  a patient identification gap at PCP level, a prior auth
+  execution failure, and an IDN formulary access failure
+- 90-day action plan with named health system targets
+- Day 30 milestones and Day 90 KPIs with owners
+
+---
+
+### Example 2 — Rare Disease Launch (IgAN / Kidney Disease)
+**The Challenge:** A rare autoimmune kidney disease drug
+approved on accelerated approval. ~200,000 US patients
+but the majority are undiagnosed. Requires kidney biopsy
+to confirm — claims data alone cannot find eligible patients.
+50% of patients are already CKD Stage 3+ at diagnosis.
+
+**Built on real experience:** The patient-finder
+architecture is grounded in a production CKD
+underdiagnosis model previously built using:
+- Commercial insurance claims (full population)
+- Medicare claims
+- Specialty and retail pharmacy claims
+- Longitudinal patient data (cross-payer)
+- HCP and provider intelligence data
+- In-network hospital EMR (lab values)
+- Medicaid claims
+
+**PharmaStack `/patient-finder` output:**
+- Proxy signals for undiagnosed patients:
+  hematuria + proteinuria + RAS inhibitor without
+  formal diagnosis code
+- EMR lab signals: UPCR ≥1.5 g/g (LOINC 2889-4),
+  eGFR declining trend (LOINC 33914-3)
+- AKI → CKD → rare kidney disease progression pathway
+- 4 patient segments from confirmed diagnosed to
+  highest-risk undiagnosed
+- Nephrologist panel data approach for HCP targeting
+
+---
+
+### Example 3 — Three Simultaneous Launches
+**The Challenge:** Three pipeline drugs launching in the
+same fiscal year across different therapeutic areas —
+narcolepsy, a rare blood cancer, and psoriasis. Each
+has a completely different patient identification
+challenge. Commercial analytics team is stretched thin.
+
+**PharmaStack `/pharma-ceo` output:**
+- Diagnosed vs. reframed the problem for each launch:
+  - Narcolepsy: 10-year average diagnosis delay —
+    patient identification is the primary barrier
+  - Rare blood cancer: small diagnosed population —
+    HCP targeting and site activation is the barrier
+  - Psoriasis: crowded market — HCP switching
+    behavior is the barrier, not patient finding
+- Different NBA strategy for each launch
+- Resource allocation recommendation across three
+  simultaneous commercial priorities
+- Portfolio-level KPI framework for the leadership team
+
+---
+
+## Built On Real Pharma Analytics Experience
+
+- Founded an acute kidney injury (AKI) medical device
+  startup — deep understanding of AKI → CKD → ESRD
+  progression pathway
+- Led kidney care analytics at a major US payer —
+  CKD underdiagnosis NBA model, value-based care
+  programs, dialysis clinical trial analytics
+- Multi-source data architecture: commercial claims,
+  Medicare, specialty/retail pharmacy, longitudinal
+  patient data, HCP intelligence, hospital EMR, Medicaid
+- Harvard Medical School-trained immunologist
+
+---
 
 ## Quick Start
 
-### Prerequisites
+### Requirements
 - Claude Code installed
-- Claude Pro or Max subscription
+- Claude Pro or Max subscription ($20-100/month)
 
 ### Install
 ```bash
@@ -38,83 +149,61 @@ cd pharmastack
 claude
 ```
 
-Claude Code reads the SKILL.md files automatically.
+Claude Code reads the SKILL.md files automatically
+on startup.
 
 ### Run Your First Query
 ```
 Using the pharma-ceo skill:
 
-Why is Leqvio uptake low despite strong clinical evidence
-showing 92% of ASCVD patients not reaching LDL-C goals
-on statins alone? What is the patient identification and
-HCP targeting strategy to accelerate adoption among
-cardiologists in the Northeast in the next 90 days?
+A drug has strong clinical evidence but uptake
+is lower than expected 6 months post-launch.
+The brand team believes the problem is HCP
+awareness. Is that the right diagnosis?
+What is the actual commercial problem and
+what is the 90-day action plan?
 ```
 
-## Example Output
+---
 
-The `/pharma-ceo` skill produced this when asked about
-Leqvio's Northeast underperformance:
+## Why One System for All Pharma
 
-- Reframed the problem: not a clinical awareness failure —
-  a patient identification gap at PCP level, prior auth
-  execution failure, and IDN formulary access failure
-- Identified 3 structural barriers with specific named
-  health systems (Mass General Brigham, NYP, Penn Medicine)
-- Generated a 90-day action plan with owners, Day 30
-  milestones, and Day 90 KPIs
-- Challenged its own assumptions
+The analytical challenges are the same across every
+company. Patient identification, HCP targeting,
+market access, forecasting, and competitive
+intelligence follow the same logic whether the
+drug is for IBD, oncology, rare disease,
+cardiovascular, or neuroscience.
 
-The `/patient-finder` skill produced:
+What changes is the specific ICD-10 codes,
+the payer landscape, the HCP specialty,
+and the competitive context.
 
-- 4 patient segments with ICD-10, RxNorm, and LOINC codes
-- 630,000 estimated Northeast patient pool
-- Ranked next-best-action by channel with conversion
-  rates and cost per patient
-- Compliance-aware NBA distinguishing pharma constraints
-  from payer direct-contact models
+PharmaStack is the methodology. You bring
+the company context.
 
-## Built On Real Data Experience
-
-The patient-finder architecture is grounded in a production
-model previously built for CKD underdiagnosis integrating:
-
-- Aetna commercial claims (full population)
-- Medicare claims
-- CVS Specialty and Retail pharmacy claims
-- Komodo Health longitudinal data
-- Definitive Healthcare HCP intelligence
-- In-network hospital EMR
-- Medicaid claims
-
-The same multi-source architecture applies to any
-pharma patient identification challenge.
-
-## Novartis Portfolio Context
-
-Skills are pre-loaded with Novartis portfolio context:
-
-**Growing:** Kisqali (+44%), Kesimpta (+27%),
-Pluvicto (+70%), Scemblix (+87%), Leqvio (+70%)
-
-**Under pressure:** Entresto (generics entered 2025),
-Cosentyx (biosimilar pressure incoming)
-
-**New launches:** Vanrafia (IgAN), Itvisma (SMA),
-Remibrutinib (CINDU — FDA submission filed)
-
-**New commercial model:** Direct-to-patient platform
-launched for Cosentyx, expanding to portfolio
+---
 
 ## Inspiration
 
-Built by a pharma commercial analytics leader inspired
-by Garry Tan's gstack — the insight that AI tools
-shouldn't be stuck in one generic mode. Pharma commercial
-teams need explicit cognitive gears: founder strategy,
-patient analytics, field execution, market access,
-and quality review.
+Built by a pharma commercial analytics leader
+inspired by Garry Tan's gstack — the insight
+that AI tools shouldn't be stuck in one generic
+mode. Pharma commercial teams need explicit
+cognitive gears just like software engineering teams:
+founder strategy, patient analytics, field execution,
+market access, competitive intelligence, and
+quality review.
+
+**gstack:** github.com/garrytan/gstack
+
+---
 
 ## License
 
-MIT
+MIT — use freely, contribute back
+
+---
+
+*Not affiliated with any pharmaceutical company.
+Drug and company examples are illustrative only.*
