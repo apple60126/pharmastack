@@ -43,7 +43,7 @@ brain you can summon on demand:
 
 ---
 
-## Example: Three Companies, Three Challenges, One System
+## Example: Four Companies, Four Challenges, One System
 
 ### Example 1 — Cardiovascular Drug Launch
 **The Challenge:** A cholesterol-lowering injectable with
@@ -68,7 +68,57 @@ on statins alone. Most are never identified.
 
 ---
 
-### Example 2 — Rare Disease Launch (IgAN / Kidney Disease)
+### Example 2 — Franchise Defense & IRA Impact Research
+**The Challenge:** A blockbuster oncology immunotherapy
+faces patent expiry in 3 years with a biosimilar wave
+coming. A subcutaneous formulation is in development
+as a potential franchise extender. Simultaneously a
+cardiovascular drug faces IRA Medicare price negotiation
+that could reshape commercial strategy.
+
+The brand team submitted 4 research questions. Before
+designing anything, PharmaStack challenged the premise:
+
+**`/market-researcher` first questioned:**
+> *"Q2 has a hidden variable your survey will miss —
+> oncology infusion centers generate revenue from IV
+> chair occupancy and buy-and-bill margin. Oncologists
+> will not disclose this in a standard survey. Q3 is
+> a payer research question being asked to the wrong
+> audience. Q4 has three distinct sub-problems requiring
+> three different methodologies and respondent types."*
+
+**Then designed a 4-study research program:**
+- Study 1: SC value perception — qualitative IDIs with
+  practice administrators (not just oncologists) to surface
+  infusion center economic barriers standard surveys miss.
+  Discrete choice experiment to force real trade-offs
+  instead of rating scales
+- Study 2: Patient switching behavior — parallel HCP and
+  patient surveys. Patient IDIs via hub program to understand
+  whether patients actually want home administration before
+  designing a conversion campaign around it
+- Study 3: Payer biosimilar substitution policy — payer IDIs
+  only, no surveys. P&T committee members and pharmacy
+  directors, not oncologists
+- Study 4: IRA impact — three-audience design: cardiologists
+  segmented by Medicare panel share, Medicare patients via
+  advocacy partners, and MA payer medical directors
+
+**Each study ends with decision triggers:**
+> *"If >60% of community oncologists cite infusion revenue
+> loss as a concern: SC launch strategy must include an
+> infusion center economics solution. Price premium
+> strategy is limited."*
+
+**What the research plan explicitly does not cover:**
+Biosimilar pricing strategy, DTC creative development,
+IRA policy scenario planning — and explains exactly
+which function owns each of those instead.
+
+---
+
+### Example 3 — Rare Disease Launch (IgAN / Kidney Disease)
 **The Challenge:** A rare autoimmune kidney disease drug
 approved on accelerated approval. ~200,000 US patients
 but the majority are undiagnosed. Requires kidney biopsy
@@ -99,7 +149,7 @@ underdiagnosis model previously built using:
 
 ---
 
-### Example 3 — Three Simultaneous Launches
+### Example 4 — Three Simultaneous Launches
 **The Challenge:** Three pipeline drugs launching in the
 same fiscal year across different therapeutic areas —
 narcolepsy, a rare blood cancer, and psoriasis. Each
