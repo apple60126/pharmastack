@@ -18,21 +18,20 @@ across every company and therapeutic area:
 - **Launches fail analytically** — not clinically
 - **Insights live in silos** — market research, forecasting,
   field analytics, and market access never talk to each other
+- **Account hierarchies go stale the moment you build them** — PE acquisitions, physician mobility, and GPO contract changes happen faster than any database updates
 
-IQVIA charges $5M+ annually for platforms that partially
-solve these problems. PharmaStack lets pharma analytics
-teams build the equivalent internally in days.
+Commercial analytics platforms solve pieces of this problem at significant cost. PharmaStack lets pharma analytics teams build the equivalent internally — and extend it with capabilities those platforms don't offer.
 
 ## The Solution
 
-10 specialized cognitive modes — each a different expert
+13 specialized cognitive modes — each a different expert
 brain you can summon on demand:
 
 | Skill | Mode | What It Does |
 |---|---|---|
 | `/pharma-ceo` | Chief Commercial Officer | Rethink the commercial problem. Challenge whether you're solving the right question. Find the 10-star strategy. |
 | `/patient-finder` | Data Scientist | Identify underdiagnosed and undertreated patients using claims, EMR, pharmacy, and longitudinal data signals |
-| `/field-coach` | Sales Coach | Generate personalized HCP call briefs, next-best-action by channel, visit priority scores |
+| `/field-coach` | Sales Coach | Generate personalized HCP call briefs, next-best-action by channel, visit priority scores. NLP on Veeva voice memo transcripts surfaces objection patterns and competitive mentions at scale across the field force. |
 | `/market-access` | Market Access Director | Map payer barriers, PA requirements, formulary strategy, pull-through by geography |
 | `/forecaster` | Commercial Forecaster | Model launch scenarios, patent cliff impact, revenue trajectory, market share projections |
 | `/plan-commercial-strategy` | Brand Strategist | Build commercial strategy from scratch. Pressure-test whether you're solving the right problem. |
@@ -40,31 +39,69 @@ brain you can summon on demand:
 | `/competitive-intelligence` | CI Analyst | Track pipeline threats, competitor positioning, launch sequencing, market share dynamics |
 | `/review-analytics` | Paranoid Analytics Director | Find flaws before insights go to leadership. Grade A-F on data quality, methodology, and business logic. |
 | `/validate-model` | QA Lead | Test patient finder logic, cohort definitions, ICD-10 codes, and model assumptions before production |
+| `/account-intelligence` | Account Intelligence Director | Solve the account hierarchy staleness problem. Combines NPI reconciliation and PE acquisition monitoring. Answers: who practices where today, who owns that practice, and what changed since last week. |
+| `/npi-reconciliation` | NPI Reconciliation Agent | Continuously monitor HCP affiliation changes by cross-referencing CMS NPI Registry against your targeting data. Flag when a high-priority prescriber's address, group practice, or institutional affiliation has changed. |
+| `/pe-acquisition-monitor` | PE Acquisition Monitor | Monitor healthcare M&A news feeds for GI and rheumatology practice acquisitions. When a PE firm acquires a targeted practice, immediately flag it, reassign account tier, and generate a structured alert for the sales rep and market access manager. |
 
 ---
 
-## Example: Four Companies, Four Challenges, One System
+## Example: Five Companies, Five Challenges, One System
 
-### Example 1 — Cardiovascular Drug Launch
-**The Challenge:** A cholesterol-lowering injectable with
-strong clinical evidence but massive underutilization.
-92% of eligible patients are not at their LDL-C goal
-on statins alone. Most are never identified.
+### Example 1 — Immunology Launch (IBD / TL1A)
+**The Challenge:** A first-in-class TL1A inhibitor launching
+into a competitive IBD market. Phase 3 data is strong but
+a competitor is 18 months behind. The window to establish
+market share before competition arrives is narrow. The
+commercial team faces three unsolved problems: NPI-to-patient
+mapping accuracy, account segmentation across PE-backed
+practices and GPO-member institutions, and patient support
+program design for a new biologic mechanism.
 
 **PharmaStack `/patient-finder` output:**
-- 4 patient segments defined by claims + EMR lab signals
-- Specific ICD-10, RxNorm, and LOINC codes for each segment
-- 630,000 estimated Northeast patient pool
-- Ranked next-best-action: rep visit, PA support,
-  EHR advisory, nurse navigator, patient mailer
-- Conversion rates and cost-per-patient-started by action
+- Step therapy position segmentation — biologic-experienced
+  patients with treatment gaps are highest priority at launch
+  (prior authorization clears immediately — step therapy
+  already satisfied)
+- ICD-10 cohort: K50.x Crohn's disease, K51.x ulcerative
+  colitis with severity signals — hospitalizations, steroid
+  dependence, GI procedures
+- Four patient tiers by proximity to eligibility:
+  - Tier A: Failed 2+ biologics, currently untreated — ready now
+  - Tier B: On biologic, showing inadequate response signals
+  - Tier C: Completing step therapy, first biologic decision imminent
+  - Tier D: On conventional therapy with escalating disease signals
+- Estimated addressable population by geography linked to
+  HCP prescribing data
 
-**PharmaStack `/pharma-ceo` output:**
-- Reframed the problem: not a clinical awareness failure —
-  a patient identification gap at PCP level, a prior auth
-  execution failure, and an IDN formulary access failure
-- 90-day action plan with named health system targets
-- Day 30 milestones and Day 90 KPIs with owners
+**PharmaStack `/account-intelligence` output:**
+- PE-owned GI practice identification — approximately 20-25%
+  of GI practices are PE-backed; formulary decisions happen
+  at management company level, not exam room
+- GPO contract mapping — which accounts have competing
+  biologic contracts that create access barriers
+- Infusion center landscape — independent vs. hospital-owned
+  vs. PE-owned, buy-and-bill economics by account type
+- NPI-to-patient linkage validation — confidence scoring
+  on HCP-to-patient links, flagging stale affiliations
+  from physician mobility
+
+**PharmaStack `/competitive-intelligence` output:**
+- Competitor Phase 3 timeline tracking and head-to-head
+  data comparison
+- HCP-level switching risk model — which gastroenterologists
+  are most likely to defect when competitor launches
+- Early warning system: claims-based treatment switching
+  detection within weeks, not quarters
+
+**PharmaStack `/market-access` output:**
+- Step therapy requirements by major payer —
+  United, Aetna, BCBS, Cigna
+- PA approval rate modeling by payer mix and geography
+- Time to first fill projections under different
+  formulary scenarios
+- Patient support program analytics framework:
+  enrollment funnel, PA navigation rates, adherence
+  prediction, intervention effectiveness measurement
 
 ---
 
@@ -149,7 +186,30 @@ underdiagnosis model previously built using:
 
 ---
 
-### Example 4 — Three Simultaneous Launches
+### Example 4 — Cardiovascular Drug Launch
+**The Challenge:** A cholesterol-lowering injectable with
+strong clinical evidence but massive underutilization.
+92% of eligible patients are not at their LDL-C goal
+on statins alone. Most are never identified.
+
+**PharmaStack `/patient-finder` output:**
+- 4 patient segments defined by claims + EMR lab signals
+- Specific ICD-10, RxNorm, and LOINC codes for each segment
+- 630,000 estimated Northeast patient pool
+- Ranked next-best-action: rep visit, PA support,
+  EHR advisory, nurse navigator, patient mailer
+- Conversion rates and cost-per-patient-started by action
+
+**PharmaStack `/pharma-ceo` output:**
+- Reframed the problem: not a clinical awareness failure —
+  a patient identification gap at PCP level, a prior auth
+  execution failure, and an IDN formulary access failure
+- 90-day action plan with named health system targets
+- Day 30 milestones and Day 90 KPIs with owners
+
+---
+
+### Example 5 — Three Simultaneous Launches
 **The Challenge:** Three pipeline drugs launching in the
 same fiscal year across different therapeutic areas —
 narcolepsy, a rare blood cancer, and psoriasis. Each
@@ -182,7 +242,10 @@ challenge. Commercial analytics team is stretched thin.
 - Multi-source data architecture: commercial claims,
   Medicare, specialty/retail pharmacy, longitudinal
   patient data, HCP intelligence, hospital EMR, Medicaid
-- Harvard Medical School-trained immunologist
+- Harvard Medical School immunologist with clinical
+  training at Brigham and Women's Hospital — deep
+  understanding of immune-mediated inflammatory disease
+  mechanisms including TL1A biology
 
 ---
 
